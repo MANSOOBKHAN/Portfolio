@@ -1,0 +1,247 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.logo a{
+  text-decoration: none;
+  color: #0f0 !important;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #111;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0f0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0f0;
+}
+
+/* Hero Section */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  text-align: center;
+  padding: 0 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 span {
+  color: #0f0;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #0f0;
+  color: #000;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00ff6a;
+  transform: translateY(-5px);
+}
+
+/* Sections with Differentiation */
+section {
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+  transition: all 0.5s ease-in-out;
+}
+
+/* About Section */
+#about {
+  background-color: #111;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Skills Section */
+#skills {
+  background-color: #0a0a0a;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-item {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+}
+
+/* Projects Section */
+#projects {
+  background-color: #080808;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Example hover effect for project cards */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-item {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-link {
+  color: #0f0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #00ff6a;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #0a0a0a;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #111;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.2rem;
+  z-index:1000;
+}
+main {
+  padding-top: 60px; /* Adjust this value to accommodate the fixed header */
+  padding-bottom: 60px; /* Adjust this value to accommodate the fixed footer */
+}
+.social-links {
+  margin-top: 10px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.social-icon:hover {
+  color: #00ff88; /* Green hover color */
+  transform: scale(1.2); /* Slightly increase size on hover */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initially hide the About section */
+.hidden {
+  opacity: 0;
+}
+
+/* Apply the fade-in effect when the section becomes visible */
+.fade-in {
+  animation: fadeIn 2s ease-out forwards; /* 1s duration, ease-out effect, forwards to retain final state */
+}
